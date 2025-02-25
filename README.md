@@ -1,8 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NewsFeed - Modern News Aggregator
+
+A modern, responsive news aggregator built with Next.js that fetches and displays news from multiple RSS feeds, ranking them based on relevance and entertainment value.
+
+## Features
+
+- **Modern UI/UX**: Clean and engaging layout using Tailwind CSS
+- **Multi-source News**: Aggregates news from various trusted sources
+- **Intelligent Ranking**: Displays news based on relevance and entertainment value
+- **Category Filtering**: Filter news by tech, gaming, sports, entertainment, and world news
+- **Responsive Design**: Looks great on desktop, tablet, and mobile devices
+- **Dark Mode**: Toggle between light and dark themes
+- **Infinite Scroll**: Smooth loading of additional content as you scroll
+
+## Technology Stack
+
+- **Next.js 15**: For server-side rendering and static site generation
+- **React 19**: For building the user interface
+- **Tailwind CSS**: For styling
+- **TypeScript**: For type-safe code
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -16,21 +47,27 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How It Works
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The application fetches news from multiple RSS feeds using the RSS2JSON API service. The news items are then processed, ranked based on factors like freshness, image availability, and title quality, and displayed in an appealing grid layout.
 
-## Learn More
+News can be filtered by category, and more content loads automatically as the user scrolls down the page.
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **app/**: Next.js app router
+  - **components/**: React components
+  - **lib/**: Utility functions and data
+  - **api/**: API routes
+  - **types.ts**: TypeScript type definitions
+- **public/**: Static assets
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+This Next.js app can be deployed on Vercel with zero configuration. 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyourusername%2Fnewsfeed)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+MIT
